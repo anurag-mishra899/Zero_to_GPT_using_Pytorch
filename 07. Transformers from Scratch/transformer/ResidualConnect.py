@@ -11,3 +11,4 @@ class ResidualConnect(nn.Module):
     def forward(self,x,sublayer):
         ## x -> (batch,seq_len,d_m)
         x = x + self.dropout(sublayer(self.norm(x)))
+        return x 
