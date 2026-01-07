@@ -7,11 +7,17 @@ A comprehensive, hands-on curriculum to understand and implement everything from
 This repository provides a structured learning path covering:
 - PyTorch fundamentals and deep learning mathematics
 - Neural network building blocks (activation functions, loss functions, optimizers)
+- **Tokenization** (BPE, WordPiece, SentencePiece) and text preprocessing
 - Word embeddings and recurrent architectures (RNN, LSTM, GRU)
-- Attention mechanisms and the Transformer architecture
-- GPT and modern LLM architectures
+- **Language modeling fundamentals** (CLM, MLM, perplexity)
+- Attention mechanisms and **positional encodings** (RoPE, ALiBi)
+- Transformer architecture, **BERT**, and encoder models
+- GPT architecture and **Seq2Seq models** (T5, BART)
+- Modern LLM architectures and **decoding strategies**
 - Training techniques (distributed training, PEFT, RLHF)
+- **Training dynamics & debugging** (loss tracking, gradient analysis)
 - Inference optimization (quantization, efficient attention, serving)
+- **Evaluation metrics & benchmarks** (BLEU, ROUGE, LLM-as-judge)
 - Interview preparation for ML/LLM roles
 
 ## Prerequisites
@@ -59,6 +65,8 @@ The setup script automatically detects and recommends the best available device.
 
 ## Module Overview
 
+### Core Modules
+
 | Module | Topic | Description |
 |--------|-------|-------------|
 | **01** | PyTorch Fundamentals | Tensors, autograd, nn.Module, DataLoaders |
@@ -66,19 +74,28 @@ The setup script automatically detects and recommends the best available device.
 | **03** | Optimization | Optimizers (SGD, Adam, AdamW), learning rate schedules |
 | **04** | Regularization & Normalization | Dropout, L1/L2 regularization, BatchNorm, LayerNorm, RMSNorm |
 | **05** | Word Representations | Word embeddings, Word2Vec concepts |
+| **05B** | Tokenization | BPE, WordPiece, SentencePiece, tiktoken implementations |
+| **05C** | Text Preprocessing | Data pipelines, datasets, collation, augmentation |
 | **06** | Recurrent Architectures | RNN, LSTM, GRU implementations |
+| **06B** | Language Modeling Fundamentals | CLM, MLM, perplexity, teacher forcing, training dynamics |
 | **07** | Attention Mechanisms | Self-attention, scaled dot-product attention, multi-head attention |
+| **07B** | Positional Encodings | Sinusoidal, Learned, RoPE, ALiBi, relative positions |
 | **08** | Transformer Architecture | Full encoder-decoder transformer implementation |
+| **08B** | BERT & Encoder Models | BERT architecture, MLM, NSP, fine-tuning, variants |
 | **09** | GPT Architecture | Decoder-only transformers, autoregressive generation |
+| **09B** | Seq2Seq: T5 & BART | Encoder-decoder models, span corruption, denoising |
 | **10** | Modern LLM Architectures | LLaMA-style innovations (RoPE, RMSNorm, SwiGLU, GQA) |
+| **10B** | Decoding Strategies | Greedy, beam search, top-p/top-k sampling, speculative decoding |
 | **11** | Efficient Attention | Flash Attention concepts, memory-efficient implementations |
 | **12** | Efficient Training | Mixed precision, gradient checkpointing, gradient accumulation |
 | **13** | Distributed Training | DDP, FSDP, model parallelism concepts |
 | **14** | PEFT | LoRA, QLoRA, parameter-efficient fine-tuning |
 | **15** | Alignment & RLHF | Reward modeling, PPO, DPO |
 | **16** | Quantization | INT8, INT4, GPTQ, AWQ concepts |
+| **16B** | Training Dynamics & Debugging | Loss analysis, gradient monitoring, debugging tools |
 | **17** | Serving LLMs | KV-cache, continuous batching, PagedAttention |
 | **18** | Interview Prep | Common questions, system design, coding exercises |
+| **18B** | Evaluation Metrics & Benchmarks | BLEU, ROUGE, perplexity, LLM-as-judge, benchmarks |
 
 ## Running the Code
 
@@ -88,11 +105,35 @@ The setup script automatically detects and recommends the best available device.
 # PyTorch fundamentals
 python Module_01_PyTorch_Fundamentals/01_tensors_and_operations.py
 
+# Tokenization (BPE, WordPiece, etc.)
+python Module_05B_Tokenization/01_tokenization.py
+
+# Language modeling fundamentals
+python Module_06B_Language_Modeling_Fundamentals/01_language_modeling.py
+
 # Attention mechanisms
 python Module_07_Attention_Mechanisms/01_attention.py
 
+# Positional encodings (RoPE, ALiBi)
+python Module_07B_Positional_Encodings/01_positional_encodings.py
+
+# BERT encoder models
+python Module_08B_BERT_Encoder_Models/01_bert.py
+
 # GPT implementation
 python Module_09_GPT_Architecture/01_gpt.py
+
+# Seq2Seq (T5, BART)
+python Module_09B_Seq2Seq_T5_BART/01_seq2seq_t5_bart.py
+
+# Decoding strategies
+python Module_10B_Decoding_Strategies/01_decoding_strategies.py
+
+# Training dynamics & debugging
+python Module_16B_Training_Dynamics_Debugging/01_training_dynamics.py
+
+# Evaluation metrics
+python Module_18B_Evaluation_Metrics_Benchmarks/01_evaluation_metrics.py
 
 # Interview prep code
 python Module_18_Interview_Prep/01_interview_code.py
@@ -132,16 +173,30 @@ Zero_to_GPT_using_Pytorch/
 │   └── ... (regularization, normalization techniques)
 ├── Module_05_Word_Representations/
 │   └── ... (word embeddings)
+├── Module_05B_Tokenization/
+│   └── ... (BPE, WordPiece, SentencePiece, tiktoken)
+├── Module_05C_Text_Preprocessing/
+│   └── ... (data pipelines, datasets, augmentation)
 ├── Module_06_Recurrent_Architectures/
 │   └── ... (RNN, LSTM, GRU)
+├── Module_06B_Language_Modeling_Fundamentals/
+│   └── ... (CLM, MLM, perplexity, teacher forcing)
 ├── Module_07_Attention_Mechanisms/
 │   └── ... (attention implementations)
+├── Module_07B_Positional_Encodings/
+│   └── ... (sinusoidal, learned, RoPE, ALiBi)
 ├── Module_08_Transformer_Architecture/
 │   └── ... (full transformer)
+├── Module_08B_BERT_Encoder_Models/
+│   └── ... (BERT architecture, MLM, fine-tuning)
 ├── Module_09_GPT_Architecture/
 │   └── ... (decoder-only GPT)
+├── Module_09B_Seq2Seq_T5_BART/
+│   └── ... (encoder-decoder, T5, BART)
 ├── Module_10_Modern_LLM_Architectures/
 │   └── ... (LLaMA-style models)
+├── Module_10B_Decoding_Strategies/
+│   └── ... (greedy, beam search, sampling, speculative)
 ├── Module_11_Efficient_Attention/
 │   └── ... (Flash Attention concepts)
 ├── Module_12_Efficient_Training/
@@ -154,10 +209,14 @@ Zero_to_GPT_using_Pytorch/
 │   └── ... (RLHF, DPO)
 ├── Module_16_Quantization/
 │   └── ... (quantization techniques)
+├── Module_16B_Training_Dynamics_Debugging/
+│   └── ... (loss tracking, gradient analysis, debugging)
 ├── Module_17_Serving_LLMs/
 │   └── ... (inference optimization)
-└── Module_18_Interview_Prep/
-    └── ... (interview guide and code)
+├── Module_18_Interview_Prep/
+│   └── ... (interview guide and code)
+└── Module_18B_Evaluation_Metrics_Benchmarks/
+    └── ... (BLEU, ROUGE, perplexity, benchmarks)
 ```
 
 ## Key Features
