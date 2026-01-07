@@ -15,6 +15,7 @@ This repository provides a structured learning path covering:
 - GPT architecture and **Seq2Seq models** (T5, BART)
 - Modern LLM architectures and **decoding strategies**
 - Training techniques (distributed training, PEFT, RLHF)
+- **Memory optimization & OOM handling** (gradient accumulation, mixed precision, checkpointing)
 - **Training dynamics & debugging** (loss tracking, gradient analysis)
 - Inference optimization (quantization, efficient attention, serving)
 - **Evaluation metrics & benchmarks** (BLEU, ROUGE, LLM-as-judge)
@@ -88,6 +89,7 @@ The setup script automatically detects and recommends the best available device.
 | **10B** | Decoding Strategies | Greedy, beam search, top-p/top-k sampling, speculative decoding |
 | **11** | Efficient Attention | Flash Attention concepts, memory-efficient implementations |
 | **12** | Efficient Training | Mixed precision, gradient checkpointing, gradient accumulation |
+| **12B** | Memory Optimization & OOM | OOM handling, benchmarks, memory profiling, visualizations |
 | **13** | Distributed Training | DDP, FSDP, model parallelism concepts |
 | **14** | PEFT | LoRA, QLoRA, parameter-efficient fine-tuning |
 | **15** | Alignment & RLHF | Reward modeling, PPO, DPO |
@@ -128,6 +130,9 @@ python Module_09B_Seq2Seq_T5_BART/01_seq2seq_t5_bart.py
 
 # Decoding strategies
 python Module_10B_Decoding_Strategies/01_decoding_strategies.py
+
+# Memory optimization & OOM handling
+python Module_12B_Memory_Optimization/01_memory_optimization.py
 
 # Training dynamics & debugging
 python Module_16B_Training_Dynamics_Debugging/01_training_dynamics.py
@@ -201,6 +206,8 @@ Zero_to_GPT_using_Pytorch/
 │   └── ... (Flash Attention concepts)
 ├── Module_12_Efficient_Training/
 │   └── ... (mixed precision, checkpointing)
+├── Module_12B_Memory_Optimization/
+│   └── ... (OOM handling, benchmarks, visualizations)
 ├── Module_13_Distributed_Training/
 │   └── ... (DDP, FSDP)
 ├── Module_14_PEFT/
